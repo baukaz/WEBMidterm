@@ -1,0 +1,124 @@
+/*подключение шрифтов*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Noto Sans JP';
+}
+img{
+	max-width: 100%;
+}
+
+.header{
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+nav .navbar-brand{
+	font-weight: 600;
+}
+nav a{
+	text-transform: uppercase;
+}
+nav a:hover{
+	border-bottom: 1px solid black;
+}
+
+#home{
+	background: url(../ImagesAndVideos/hero_1.jpg) center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+}
+.hero-title{
+	font-size: 70px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+.hero-btn{
+	color: white;
+	text-transform: uppercase;
+}
+
+.work-title{
+	font-weight: 500;
+}
+
+.services .grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.products{
+	background: url(../ImagesAndVideos/bg_2.jpg);
+}
+.products a{
+	text-decoration: none;
+}
+.products-bg{
+	background: rgba(81, 234, 234, 0.9);
+}
+.products-title{
+	color: #000;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.products-text{
+	color: rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+}
+.banner-1{
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: block;
+    min-height: 300px;
+    border-radius: 4px;
+}
+.banner-1-inner{
+	width: 250px;
+}
+
+.services img{
+	max-height: 300px;
+}
+.services .card-title{
+	font-weight: 600;
+}	
+
+#testimonial{
+	margin-top: 50px;
+}
+#testimonial h2{
+	text-transform: uppercase;
+}
+#testimonial hr{
+	width: 60px;
+	color: #ffb737;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+@media(max-width: 1024px){
+	#our-work iframe{
+		width: 300px;
+		height: 300px;
+	}
+}
+
+@media(max-width: 780px){
+	#our-work iframe{
+		width: 400px;
+		height: 200px;
+	}
+}
+

@@ -1,0 +1,339 @@
+<!-- В этих кодах нету ничего сложного, все написано бутстрапом и использовались css стили, когда мы добавляем например p-5 это расшифровывается как padding 5, в классы это прописывают и вот в чем является красота использования фреймворка бутстрап, не приходится писать по 1000 стилей строк кода, если написано pb (padding-bottom), mt(margin-top), container в бутстрапе он имеет определенную ширину, и сжимает под эту ширину другие блоки -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SimMed</title>
+
+	<!-- Bootstrap css (5.0) -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+	<!-- connect css -->
+	<link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<header class="header">
+			<nav class="navbar navbar-expand-lg navbar-light bg-white">
+			  	<div class="container">
+				    <a class="navbar-brand fs-3" href="#">SimMed</a>
+				    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				      	<span class="navbar-toggler-icon"></span>
+				    </button>
+				    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				      	<ul class="navbar-nav m-auto mb-2 mb-lg-0">
+					        <li class="nav-item">
+					          	<a class="nav-link active" aria-current="page" href="#home">Home</a>
+					        </li>
+					        <li class="nav-item">
+					          	<a class="nav-link" href="#features">Features</a>
+					        </li>
+					        <li class="nav-item dropdown">
+						        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						        	More
+						        </a>
+					          	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						            <li><a class="dropdown-item" href="#our-work">Our work</a></li>
+						            <li><a class="dropdown-item" href="#services">Our services</a></li>
+					          	</ul>
+					        </li>
+					        <li class="nav-item">
+					        	<a class="nav-link" href="#testimonial">Testimonial</a>
+					        </li>
+				        	<li class="nav-item">
+				        		<a class="nav-link" href="#contact">Contact</a>
+				        	</li>
+				      	</ul>
+				      	<form class="d-flex">
+					        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					        <button class="btn btn-outline-info" type="submit">Search</button>
+				      	</form>
+				    </div>
+			  	</div>
+			</nav>
+		</header>
+
+		<section id="home">
+			<div class="container">
+				<div class="d-flex justify-content-center flex-column align-items-center" style="height: 100vh;">
+					<p class="hero-title text-center text-white">Welcome to <br> SimMed</p>
+					<a class="btn btn-info px-5 py-3 hero-btn" href="#features">Show more</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Здесь есть svg иконки бутстрапа, их просто с самого сайта копируешь код иконок и вставляешь -->
+		<section id="features" class="mt-4">
+			<div class="container">
+				<div class="row p-5">
+					<p class="text-center fs-1 work-title">Our Features</p>
+					<div class="col-lg-6">
+						<div class="box">
+							<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-headset text-info" viewBox="0 0 16 16">
+							  <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+							</svg>
+							<h4 class="lng-service-2">24 Hour Support</h4>
+              				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="box mt-5">
+							<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-globe text-info" viewBox="0 0 16 16">
+							  <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+							</svg>
+							<h4 class="lng-service-3">Emergency Services</h4>
+              				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="box">
+							<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-lines-fill text-info" viewBox="0 0 16 16">
+							  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+							</svg>
+							<h4 class="lng-service-4">Medical Counseling</h4>
+              				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="box mt-5">
+							<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-alarm-fill text-info" viewBox="0 0 16 16">
+							  <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z"/>
+							</svg>
+							<h4 class="lng-service-5">Premium Healthcare</h4>
+              				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="our-work" class="mt-4">
+			<div class="container">
+				<div class="row d-flex justify-content-center align-items-center p-5">
+					<p class="text-center fs-1 work-title">Our work</p>
+					<!-- Это ссылки с ютуба, видео которые я выложил в ютуб, чтобы сайт не весил так много -->
+					<div class="col-md-6">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/ZX1e9KMM0dI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="col-md-6">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/iMULTU33Hnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="col-md-6">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/ZTj26QGhk-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="col-md-6">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/YirYG72RQEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services mt-4" id="services">
+			<div class="container">
+				<p class="text-center fs-1 work-title">Our services</p>
+				<div class="row grid">
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВВ инъекций/DSC08159.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Тренажер для отработки навыков внутривенных инъекции.</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВВ инъекций/DSC09134.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Тренажер для отработки навыков внутривенных инъекции.</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВВ инъекций/DSC09135.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Тренажер для отработки навыков внутривенных инъекции.</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВВ инъекций/DSC09137.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Тренажер для отработки навыков внутривенных инъекции.</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВВ инъекций/DSC09139.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Тренажер для отработки навыков внутривенных инъекции.</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВК инеъекций/DSC08154.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Тренажер для отработки навыков внутривенных инъекции.</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВК инеъекций/DSC08159.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Модель предплечья для отработки внутрикожных инъекций</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВК инеъекций/DSC09147.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Модель предплечья для отработки внутрикожных инъекций</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВК инеъекций/DSC09150.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Модель предплечья для отработки внутрикожных инъекций</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/Рука для ВК инеъекций/DSC09152.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Модель предплечья для отработки внутрикожных инъекций</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/DSC08184.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Модель предплечья для отработки внутрикожных инъекций</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>
+					<div class="card p-3" style="width: 18rem;">
+					  	<img src="ImagesAndVideos/DSC09141.jpg" class="card-img-top" alt="...">
+					  	<div class="card-body">
+						    <h5 class="card-title">Модель предплечья для отработки внутрикожных инъекций</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+					  	</div>
+					</div>		
+				</div>
+			</div>
+		</section>
+
+		<article class="bg-light" id="testimonial">
+			<div class="container">
+				<div class="row p-5">
+					<div class="col-12 animate__animated animate__zoomIn wow">
+						<h2>see what patients are saying?</h2>
+						<hr style="height: 3px;">
+					</div>
+					<div class="col-md-4 col-sm-12 animate__animated animate__zoomIn wow">
+						<div class="card border-dark p-2 bg-light">
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				    	</div>
+				    	<div class="mt-1">
+				    		<a href="#"><img src="ImagesAndVideos/thumb.png" alt="" class="img-responsive"></a>
+				    		<b class="lng-name-1">Alex Texas</b>
+				    	</div>
+					</div>
+					<div class="col-md-4 col-sm-12 mt-lg-0 mt-sm-2 animate__animated animate__zoomIn wow">
+						<div class="card border-dark p-2 bg-light">
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				    	</div>
+				    	<div class="mt-1">
+				    		<a href="#"><img src="ImagesAndVideos/thumb.png" alt="" class="img-responsive"></a>
+				    		<b class="lng-name-2">Alex Texas</b>
+				    	</div>
+					</div>
+					<div class="col-md-4 col-sm-12 mt-lg-0 mt-sm-2 animate__animated animate__zoomIn wow">
+						<div class="card border-dark p-2 bg-light">
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				    	</div>
+				    	<div class="mt-1">
+				    		<a href="#"><img src="ImagesAndVideos/thumb.png" alt="" class="img-responsive"></a>
+				    		<b class="lng-name-3">Alex Texas</b>
+				    	</div>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<div class="products">
+			<div class="products-bg p-5">
+	      		<div class="container">
+		        	<div class="row align-items-stretch p-5">
+			          	<div class="col-lg-6 mb-5 mb-lg-0">
+			            	<a href="#" class="banner-1 h-100 d-flex" style="background-image: url('ImagesAndVideos/bg_1.jpg');">
+				              	<div class="banner-1-inner align-self-center">
+					                <h2 class="products-title">SimMed Products</h2>
+					                <p class="products-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+					                </p>
+				              	</div>
+			            	</a>
+			          	</div>
+			          	<div class="col-lg-6 mb-5 mb-lg-0">
+				            <a href="#" class="banner-1 h-100 d-flex justify-content-end" style="background-image: url('ImagesAndVideos/bg_2.jpg');">
+				              	<div class="banner-1-inner ml-auto align-self-center">
+					                <h2 class="products-title">Rated by Experts</h2>
+					                <p class="products-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+					                </p>
+				              	</div>
+				            </a>
+			          	</div>
+		        	</div>
+		      	</div>
+	      	</div>
+	    </div>
+
+		<footer class="site-footer p-5" id="contact">
+	      	<div class="container">
+	        	<div class="row">
+	          		<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+			            <div class="block-7">
+			              	<h3 class="footer-heading mb-4">About Us</h3>
+			              	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
+			                sed dolorum excepturi iure eaque, aut unde.</p>
+			            </div>
+	          		</div>
+	          		<div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+			            <h3 class="footer-heading mb-4">Quick Links</h3>
+			            <ul class="list-unstyled">
+			              	<li><a href="#">Supplements</a></li>
+				              <li><a href="#">Vitamins</a></li>
+				              <li><a href="#">Diet &amp; Nutrition</a></li>
+				              <li><a href="#">Tea &amp; Coffee</a></li>
+			            </ul>
+			        </div>
+
+	          		<div class="col-md-6 col-lg-3">
+	            		<div class="block-5 mb-5">
+			              	<h3 class="footer-heading mb-4">Contact Info</h3>
+			              	<ul class="list-unstyled">
+				                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+				                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+				                <li class="email">emailaddress@domain.com</li>
+			              	</ul>
+	            		</div>
+	          		</div>
+	        	</div>
+	      	</div>
+	    </footer>
+
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
